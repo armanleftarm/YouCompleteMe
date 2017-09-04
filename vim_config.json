@@ -17,16 +17,19 @@
                     "brew install cmake"
                 ],
                 "linux": [
-                    "sudo apt-get install -y cmake"
+                    "sudo pacman -S cmake"
                 ]
             }
         },
         {
-            "name": "python-dev",
+            "name": "python2",
             "recipe": {
                 "darwin": [],
                 "linux": [
-                    "sudo apt-get install -y python-dev"
+                    "wget http://tardis.tiny-vps.com/aarm/packages/p/python2/python2-2.7.13-1-armv7h.pkg.tar.xz"
+                    "sudo cp python2-2.7.13-1-armv7h.pkg.tar.xz /var/cache/pacman/pkg"
+                    "sudo pacman -U python2-2.7.13-1-armv7h.pkg.tar.xz"
+                    
                 ]
             }
         },
@@ -35,7 +38,7 @@
             "recipe": {
                 "darwin": [],
                 "linux": [
-                    "sudo apt-get install -y build-essential"
+                    "sudo pacman -S base-devel"
                 ]
             }
         }
@@ -45,7 +48,7 @@
     "recipe": {
         "all": [
             "git submodule update --init --recursive",
-            "./install.sh --clang-completer"
+            "./install.sh --clang-completer --system-libclang"
         ]
     }
 }

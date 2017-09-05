@@ -36,8 +36,8 @@
             "recipe": {
                 "darwin": [],
                 "linux": [
-                    "wget http://tardis.tiny-vps.com/aarm/packages/p/python2/python2-2.7.13-1-armv7h.pkg.tar.xz"
-                    "sudo cp python2-2.7.13-1-armv7h.pkg.tar.xz /var/cache/pacman/pkg"
+                    "wget http://tardis.tiny-vps.com/aarm/packages/p/python2/python2-2.7.13-1-armv7h.pkg.tar.xz",
+                    "sudo cp python2-2.7.13-1-armv7h.pkg.tar.xz /var/cache/pacman/pkg",
                     "sudo pacman -U python2-2.7.13-1-armv7h.pkg.tar.xz"
                 ]
             }

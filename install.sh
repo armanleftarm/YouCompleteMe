@@ -16,11 +16,11 @@ command_exists() {
   command -v "$1" >/dev/null 2>&1 ;
 }
 
-PYTHON_BINARY=python3
+PYTHON_BINARY=python
 
-# if command_exists python2; then
-#  PYTHON_BINARY=python
-# fi
+ if command_exists python2; then
+  PYTHON_BINARY=python
+ fi
 
 $PYTHON_BINARY "$build_file" "$@"
 

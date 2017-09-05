@@ -22,11 +22,11 @@
             }
         },
         {
-            "name": "python",
+            "name": "python3",
             "recipe": {
                 "darwin": [],
                 "linux": [
-                    "sudo pacman -S python"
+                    "sudo pacman -S python3"
                     
                 ]
             }

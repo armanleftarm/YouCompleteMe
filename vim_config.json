@@ -65,7 +65,7 @@
     "pkg-url": "https://github.com/Valloric/YouCompleteMe.git",
     "recipe": {
         "all": [
-            "sudo pacman -Su boost",
+            "sudo pacman -S boost",
             "git submodule update --init --recursive",
             "./install.sh --clang-completer --system-libclang --system-boost"
         ]

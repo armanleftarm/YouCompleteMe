@@ -22,6 +22,16 @@
             }
         },
         {
+            "name": "python",
+            "recipe": {
+                "darwin": [],
+                "linux": [
+                    "sudo pacman -S python"
+                    
+                ]
+            }
+        },
+        {
             "name": "python2",
             "recipe": {
                 "darwin": [],
@@ -29,12 +39,20 @@
                     "wget http://tardis.tiny-vps.com/aarm/packages/p/python2/python2-2.7.13-1-armv7h.pkg.tar.xz"
                     "sudo cp python2-2.7.13-1-armv7h.pkg.tar.xz /var/cache/pacman/pkg"
                     "sudo pacman -U python2-2.7.13-1-armv7h.pkg.tar.xz"
-                    
                 ]
             }
         },
         {
-            "name": "build-essential",
+            "name": "clang",
+            "recipe": {
+                "darwin": [],
+                "linux": [
+                    "sudo pacman -S clang"
+                ]
+            }
+        },
+        {
+            "name": "base-devel",
             "recipe": {
                 "darwin": [],
                 "linux": [
@@ -48,7 +66,7 @@
     "recipe": {
         "all": [
             "git submodule update --init --recursive",
-            "./install.sh --clang-completer --system-libclang"
+            "./install.sh --clang-completer"
         ]
     }
 }

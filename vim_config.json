@@ -52,11 +52,11 @@
             }
         },
         {
-            "name": "base-devel",
+            "name": "gcc",
             "recipe": {
                 "darwin": [],
                 "linux": [
-                    "sudo pacman -S base-devel"
+                    "sudo pacman -S base-devel",
                 ]
             }
         }
@@ -65,6 +65,7 @@
     "pkg-url": "https://github.com/Valloric/YouCompleteMe.git",
     "recipe": {
         "all": [
+            "sudo pacman -Su boost",
             "git submodule update --init --recursive",
             "./install.sh --clang-completer --system-libclang --system-boost"
         ]
